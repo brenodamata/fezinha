@@ -24,7 +24,7 @@ gem 'nokogiri'
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem 'fezinha_generator', '~> 0.1.0'
+gem 'fezinha_generator', '~> 0.1.1'
 
 group :development, :test do
   gem 'byebug'
