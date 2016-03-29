@@ -16,9 +16,6 @@
 !/log/.keep
 /tmp
 
-# Ignore application configuration
-/config/secrets.yml
-
 # Ignore development files
 .byebug_history
 .DS_Store
