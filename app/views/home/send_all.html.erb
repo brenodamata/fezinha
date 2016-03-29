@@ -1,1 +1,22 @@
-send.html.erb
+<div class="page-header">
+  <h1>Fezinhas enviadas!</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Sortudo</th>
+      <th>Email</th>
+      <th>Fezinha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bets.each do |bet| %>
+      <tr>
+        <td><%= bet.user.name %></td>
+        <td><%= bet.user.email %></td>
+        <td><%= bet.numbers %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

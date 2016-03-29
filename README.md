@@ -1,4 +1,4 @@
-## Fezinha 1.0
+## 📿 Fezinha 1.0
 
 ##### Todo
   Send method
