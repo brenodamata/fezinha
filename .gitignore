@@ -19,3 +19,5 @@
 # Ignore development files
 .byebug_history
 .DS_Store
+secrets
+/config/mailer.yml

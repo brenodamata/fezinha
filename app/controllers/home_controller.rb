@@ -8,6 +8,6 @@ class HomeController < ApplicationController
     User.all.each do |u|
       u.send_fezinha
     end
-    @bets = FezinhaRecords.latest
+    @bets = FezinhaRecord.latest
   end
 end

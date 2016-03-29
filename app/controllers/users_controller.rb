@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    #mostrar todas as fezinhas
+    @fezinhas = @user.fezinha_records
   end
 
   def new

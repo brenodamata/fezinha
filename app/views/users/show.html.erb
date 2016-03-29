@@ -1,0 +1,20 @@
+<%- model_class = User -%>
+<div class="page-header">
+  <h1>Fezinhas enviadas para <%= @user.name %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Dia</th>
+      <th>Numeros</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @fezinhas.each do |fezinha| %>
+      <tr>
+        <td><%= fezinha.created_at.strftime('%B %e %Y') %></td>
+        <td><%= eval(fezinha.numbers).join(' ') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
