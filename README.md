@@ -1,4 +1,6 @@
 ## 📿 Fezinha 1.0
 
 ##### Todo
-  Send method
+  - Add redis & resque
+  - Add validations (uma fezinha por concurso)
+

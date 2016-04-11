@@ -6,8 +6,18 @@ class User < ActiveRecord::Base
   end
 
   def send_fezinha
-    fezinha = FezinhaGenerator.fezinha
-    FezinhaRecord.create!(user: self, numbers: fezinha.to_s)
-    FeMailer.fezinha_email(self, fezinha.join(' ')).deliver_now
+    begin
+      fezinha = FezinhaGenerator.fezinha
+      FezinhaRecord.create!(user: self, numbers: fezinha.to_s)
+      FeMailer.fezinha_email(self, fezinha.join(' ')).deliver_now
+    rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+      #error handling
+      FezinhaRecord.last.toggle!(:sent)
+      puts "======================================="
+      puts "DEU RUIIMMMMMMMMMM"
+      puts "#{self.name}"
+      puts "#{e}"
+      puts "======================================="
+    end
   end
 end
