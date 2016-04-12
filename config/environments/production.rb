@@ -64,7 +64,7 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => "https://fezinha.herokuapp.com/" }
+  config.action_mailer.default_url_options = { :host => "https://fezinha-app.herokuapp.com/" }
 
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -72,7 +72,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV["SENDGRID_USERNAME"],
     :password       => ENV["SENDGRID_PASSWORD"],
-    :domain         => "fezinha.herokuapp.com",
+    :domain         => "fezinha-app.herokuapp.com",
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

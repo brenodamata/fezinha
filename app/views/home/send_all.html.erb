@@ -7,6 +7,7 @@
       <th>Sortudo</th>
       <th>Email</th>
       <th>Fezinha</th>
+      <th>Status</th>
     </tr>
   </thead>
   <tbody>
@@ -15,8 +16,8 @@
         <td><%= link_to bet.user.name, user_path(bet.user) %></td>
         <td><%= bet.user.email %></td>
         <td><%= eval(bet.numbers).join(' ') %></td>
+        <td><%= bet.sent %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-

@@ -22,8 +22,7 @@ Rails.application.configure do
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV["SENDGRID_USERNAME"],
-    :password       => ENV["SENDGRID_PASSWORD"],
-    :domain         => "fezinha.herokuapp.com",
+    :password       => ENV["SENDGRID_PASSWORD"]
   }
 
   # Print deprecation notices to the Rails logger.
